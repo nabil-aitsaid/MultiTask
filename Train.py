@@ -13,9 +13,8 @@ class ExtractFirstChannel(object):
     
 batchsize = 128
 transform = transforms.Compose([
-    transforms.
     transforms.ToTensor(),           # Convert the image to a PyTorch tensor
-    ExtractFirstChannel(),
+    ExtractFirstChannel(),    
     transforms.Normalize(mean=[0.5], std=[0.5])  # Normalize the image
 ])
 traindataset = datasets.ImageFolder(root='/home/nabil/masteriales/datasets/multimnist/train', transform=transform)
